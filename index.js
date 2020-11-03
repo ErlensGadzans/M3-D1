@@ -37,6 +37,8 @@ const sumNr = (x, y) =>{
 let str = 'Hello'
 //.substr()
 
+//console.log(str.substr(2, 5));
+
 //split, splice/slice, join
 
 
@@ -94,8 +96,7 @@ function range(x, y) {
  Create a function to create a new string of specified copies (positive number) of a given string.
  */
 
- //const x = 5;
- //const string = "String text";
+
 
  function multipleStrings(str, x){
 if( x<0)
@@ -105,8 +106,7 @@ return "Change the value of x to complete the function";
   return str.repeat(x);
 }
  
-
-console.log(multipleStrings("Text", 5));
+// console.log(multipleStrings("Text", 5));
 
   /*
 
@@ -114,7 +114,18 @@ console.log(multipleStrings("Text", 5));
  Create a function to display the city name if the string begins with "Los" or "New" otherwise return blank.
  */
 
+ function cityName (str) {
+   if (str.lenghth >= 3 && (str.substring(0,3) == "Los") || (str.substring(0,3) == "New"))
+ {
+    return str
+ }
+  return ""
 
+}
+
+//console.log(cityName("LosAngeles"));
+//console.log(cityName("NewYork"));
+//console.log(cityName("Chicago"));
 
 
 
@@ -123,21 +134,78 @@ console.log(multipleStrings("Text", 5));
  Create a function to calculate the sum of three elements of a given array of integers of length 3.
  */
 
+
+ function sumOfThree(x) 
+ {
+   return x[0] + x[1] + x[2];
+ }
+ //console.log(sumOfThree([10, 1, 3]))
+
+ 
+ 
+
   /*
 
  9)
  Create a function to test whether an array of integers of length 2 contains 1 or a 3. 
  */
 
+ 
+let myArray= [2,3];
+
+function numbercontains(){
+    for(let i=0; i<myArray.length; i++){
+        return (myArray[i]===1 || myArray[i]===3) ?  true : false
+    }
+    }
+
+ 
+
+//console.log(numbercontains([]))
+
+
+
   /*
 
  10)
 
  Create a function to test whether an array of integers of length 2 does not contain 1 or a 3
+*/
+
+//let myArray= [2,3];
+
+function numberNotContains(){
+    for(let i=0; i<myArray.length; i++){
+        return (myArray[i]!=1 || myArray[i]!=3) ?  true : false
+    }
+    }
+
+ 
+
+//console.log(numberNotContains());
+
+
+
+  /*
 
  11)
 
  Create a function to find the longest string from a given array of strings.
+
+*/
+
+ function longest_string(str_ara) {
+  let max = str_ara[0].length;
+  str_ara.map(v => max = Math.max(max, v.length));
+  result = str_ara.filter(v => v.length == max);
+  return result;
+}
+
+//console.log(longest_string(['goodmorning', 'howareyou', 'comoon', 'letsunderstand','iwanttounderstand']))
+
+
+
+/*
 
  12)
 
@@ -148,6 +216,31 @@ console.log(multipleStrings("Text", 5));
      Right angle: An 90 degree angle.
      btuse angle: An angle between 90 and 180 degrees.
      Straight angle: A 180 degree angle.
+
+
+*/
+
+function findAngle(angle){
+  if (angle < 90)
+    {return "Acute angle"}
+  
+    if (angle == 90)
+    {return "Right angle"}
+
+    if (90 < angle < 180)
+    {return "Btuse angle"}
+
+    if (angle == 180)
+    {return "Stright angle"}
+} 
+
+console.log(findAngle(180))
+
+
+
+
+/*
+
 
  13)
 
