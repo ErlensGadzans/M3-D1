@@ -245,10 +245,29 @@ console.log(findAngle(180))
  13)
 
  Create a function to find the index of the greatest element of a given array of integers
+*/
+
+
+
+
+
+
+/*
+
+
 
  14)
 
  Create a function to get the largest even number from an array of integers.
+
+*/
+
+
+
+
+/*
+
+
 
  15)
 
@@ -257,6 +276,26 @@ console.log(findAngle(180))
  16)
 
  Create a function to check from two given integers, whether one is positive and another one is negative.
+
+
+*/
+function positivNegative (x, y){
+  if(x>0 && y>0)
+  {return false}
+  if (x<0 && y<0)
+  {return false}
+  if(x<0 && y>0)
+  {return true}
+  if (x>0 && y<0)
+  {return true}
+}
+
+//console.log(positivNegative(10,-1))
+
+
+/*
+
+
 
  17)
 
